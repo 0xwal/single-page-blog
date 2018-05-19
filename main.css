@@ -4,6 +4,8 @@
     padding: 0;
     margin: 0;
 }
+
+
 html{
     font-family: 'Quicksand', sans-serif;
     color: #343434;
@@ -86,24 +88,42 @@ nav header{
     margin-bottom: 5px;
     transition: all .2s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
+#posts ul li::before{
+    content: '';
+    border-radius: 3px 0 0 3px;
+    border: 1px solid #343434;
+    width: 5px;
+    position: absolute;
+    display: block;
+    height: 100%;
+    background-color: #343434;
+    top: -1px;
+    left: -1px;
+}
+
 #posts ul li span{
     font-size: 14px;
     color: rgba(116, 116, 116, 0.89);
 }
 #posts ul li:hover, #posts ul li.active{
-    background-color: #343434;
     color:#fff !important;
+    border: 1px solid #343434;
+}
+#posts ul li:hover{
+    background-color: #34343463;
 }
 #posts ul li.active{
     width: 102%;
+    background-color: #343434;
 }
 #body{
     margin-left: 3px;
     display: none;
 }
 #body div{
-    line-height: 1.7
+    line-height: 1.7;
 }
 footer{
     background-color: #343434;
@@ -178,5 +198,20 @@ footer{
     #body div{
         line-height: 2;
         font-size: 16px;
+    }
+    #posts ul li.active{
+        width: 100.5%;
+    }
+    #posts ul li:after{
+        content: '';
+        border-radius: 0 3px 3px 0;
+        border: 1px solid #343434;
+        width: 5px;
+        position: absolute;
+        display: block;
+        height: 100%;
+        background-color: #343434;
+        top: -1px;
+        right: -1px;
     }
 }
